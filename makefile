@@ -3,13 +3,13 @@ CFLAGS = -g -Wall
 main: Main.o Race.o Horse.o
     $(CC) $(CFLAGS) Main.o Race.o Horse.o -o game
 
-Main.o: Main.cpp Race.h Horse.h
-    $(CC) $(CFLAGS) -c Main.cpp
+Main.o: main.cpp race.h horse.h
+    $(CC) $(CFLAGS) -c main.cp
 
-Race.o: Race.cpp Race.h Horse.h
-    $(CC) $(CFLAGS) -c Race.cpp
+Race.o: race.cpp race.h horse.h
+    $(CC) $(CFLAGS) -c race.cpp
 
-Horse.o: Horse.cpp Horse.h
+Horse.o: horse.cpp horse.h
     $(CC) $(CFLAGS) -c Horse.cpp
 
 clean: 
