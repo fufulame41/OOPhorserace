@@ -1,5 +1,3 @@
-//was having trouble with the make file
-
 CC = g++
 
 main: Main.o Race.o Horse.o
@@ -14,3 +12,9 @@ Race.o: Race.cpp Race.h Horse.h
 Horse.o: Horse.cpp Horse.h
     $(CC) $(CFLAGS) -c Horse.cpp
 
+clean: 
+    rm *.o
+    rm main
+
+run: main
+    ./main
