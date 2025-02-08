@@ -1,5 +1,5 @@
 CC = g++
-
+CFLAGS = -g -Wall
 main: Main.o Race.o Horse.o
     $(CC) $(CFLAGS) Main.o Race.o Horse.o -o game
 
